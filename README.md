@@ -1,6 +1,8 @@
 # SOUQ Black Friday - Front-end Form
 
-Repositório destinado ao controle de versão do projeto `SOUQ Black Friday`.
+sitório destinado ao controle de versão do projeto `SOUQ Black Friday`.
+
+Repo![localhost_8080_](https://github.com/Wev-at2/lp_souq_blackfriday-20231027/assets/82066256/ff1339e7-131a-4fe5-b6cf-b8b9cb835eda)
 
 ## Requirements
 
