@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Souq - Black Friday</title>
+    <!-- Styles-->
+    <link href="./assets/css/styles.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+      <header></header>
+      <section class="wc-souqblackfriday">
+        <div class="wc-souqblackfriday__bg">
+          <div class="wc-souqblackfriday__left">
+            <picture>
+              <source media="(min-width: 769px" srcset="./assets/images/souq-mainbanner4x5.jpg">
+              <source media="(max-width: 768px" srcset="./assets/images/souq-mainbanner1x1.jpg"><img class="ida-main__banner--img" src="/caminho-completo/para/imagem-default.jpg" alt="FUTURE FRIDAY" title="FUTURE FRIDAY" style="display: block; max-width: 100%; height: auto">
+            </picture>
+          </div>
+          <div class="wc-souqblackfriday__right">
+            <div class="wc-souqblackfriday__right--container">
+              <div class="wc-souqblackfriday__right--title">
+                <h1>
+                  <picture> <img src="./assets/images/souq_blackfriday_logo.png" alt="SOUQ BLACK FRIDAY"></picture>
+                </h1>
+                <h2>ANTECIPADA</h2>
+              </div>
+              <p class="wc-souqblackfriday__right--description_one"><strong>Ei, Souqlover ! </strong>Que tal ter acesso antecipado a Black Friday 2023? </p>
+              <div class="wc-countdown" id="countdown">
+                <h3 class="wc-countdown__title">faltam... </h3>
+                <div class="wc-countdown__container" id="countdown"><span id="days"></span><span id="hours"></span><span id="minutes"></span><span id="seconds"></span></div>
+                <p class="wc-countdown__description">Para o inicio da Black Friday SOUQ!</p>
+              </div>
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  // Data de término do countdown
+                  const endDate = new Date("2023-11-03 00:00:00").getTime();
+                
+                  // Elementos para contagem separada
+                  const daysElement = document.getElementById("days");
+                  const hoursElement = document.getElementById("hours");
+                  const minutesElement = document.getElementById("minutes");
+                  const secondsElement = document.getElementById("seconds");
+                
+                  const timer = setInterval(function () {
+                    const now = new Date().getTime();
+                    const timeRemaining = endDate - now;
+                
+                    if (timeRemaining <= 0) {
+                      clearInterval(timer);
+                      daysElement.innerHTML = "00";
+                      hoursElement.innerHTML = "00";
+                      minutesElement.innerHTML = "00";
+                      secondsElement.innerHTML = "00";
+                    } else {
+                      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                      const hours = Math.floor(
+                        (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                      );
+                      const minutes = Math.floor(
+                        (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+                      );
+                      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                
+                      daysElement.innerHTML = days.toString().padStart(2, '0');
+                      hoursElement.innerHTML = hours.toString().padStart(2, '0');
+                      minutesElement.innerHTML = minutes.toString().padStart(2, '0');
+                      secondsElement.innerHTML = seconds.toString().padStart(2, '0');
+                    }
+                  }, 1000);
+                })
+                
+              </script>
+              <p class="wc-souqblackfriday__right--description_two">Inscreva-se para conferir a seleção antes do início oficial, contar com condições especiais e receber promoções exclusivas.</p>
+              <form class="wc-souqblackfriday__form" action="./" method="POST">
+                <div class="wc-souqblackfriday__form--data">
+                  <div class="wc-souqblackfriday__form--data_name" id="name">
+                    <label for="souqblackfriday-name">Nome</label>
+                    <input type="text" name="souqblackfriday-name" id="souqblackfriday-name" placeholder="insira seu nome aqui">
+                  </div>
+                  <div class="wc-souqblackfriday__form--data_email" id="email">
+                    <label for="souqblackfriday-email">E-mail</label>
+                    <input type="email" name="souqblackfriday-email" id="souqblackfriday-email" placeholder="insira seu e-mail aqui">
+                  </div>
+                  <div class="wc-souqblackfriday__form--data_phone" id="phone">
+                    <label for="souqblackfriday-phone">Telefone</label>
+                    <input type="tel" name="souqblackfriday-phone" id="souqblackfriday-phone" placeholder="(00) 00000-0000" maxlength="14">
+                  </div>
+                  <div class="wc-souqblackfriday__form--data_newsletter" id="newsletter">
+                    <label for="marketing">Quer ver mais comunicações de SOUQ no seu e-mail? <br>Abaixo, marque suas áreas de interesse, souqlover:</label>
+                    <div class="wc-souqblackfriday__form--data_newsletter-checkbox">
+                      <div class="checkbox">
+                        <input type="checkbox" name="newsletter" value="Roupas" id="roupas">
+                        <label for="roupas">Roupas</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="newsletter" value="Servir" id="servir">
+                        <label for="servir">Servir</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="newsletter" value="Decorar" id="decorar">
+                        <label for="decorar">Decorar</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="newsletter" value="Acessórios" id="acessorios">
+                        <label for="acessorios">Acessórios</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="newsletter" value="Todos" id="todos">
+                        <label for="todos">Todos</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wc-souqblackfriday__form--paragraph">
+                  <p>*Ao disponibilizar os seus dados, você concorda com as Políticas de Privacidade do site.</p>
+                </div>
+                <div class="wc-souqblackfriday__form--submit">
+                  <button>Cadastre-se!</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer></footer>
+    </div>
+    <!-- Scripts-->
+    <script src="./assets/js/scripts.min.js"></script>
+  </body>
+</html>
