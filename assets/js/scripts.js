@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Seu código JavaScript aqui
 
   // Defina a data de término do countdown
-  const endDate = new Date("2023-11-01 00:00:00").getTime();
+  const endDate = new Date("2026-11-01 00:00:00").getTime();
 
   // Atualize o contador a cada segundo
   const countdown = document.getElementById("countdown");
